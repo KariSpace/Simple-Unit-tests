@@ -16,9 +16,10 @@ class TestIntegerStack(unittest.TestCase):
         self.assertEqual(self.test_stack.push(0.76), [0])
         self.assertEqual(self.test_stack.push(-5.7456), [0, -5])
 
-    # def test_push_float(self):
-    #     self.assertEqual(self.test_stack.push(0.76), [])
-    #     self.assertEqual(self.test_stack.push(-0.7456), [])
+    def test_push_string(self):
+        self.assertEqual(self.test_stack.push("56"), [56])
+        self.assertEqual(self.test_stack.push("random string"), [56])
+        self.assertEqual(self.test_stack.push("6.234"), [56,6]) # didn`t passed
 
 
   
