@@ -10,9 +10,7 @@ Simple unit-tests lab:  implement a stack based on a static array. Each element 
 
 ----------------------------------------------------------------------
 
-test_pop (__main__.TestIntegerStack) ... stack already empty stack already empty
-
-ok
+test_pop (__main__.TestIntegerStack) ... stack already empty stack already empty ok
 
 test_push_float (__main__.TestIntegerStack) ... ok
 
