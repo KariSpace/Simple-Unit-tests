@@ -29,8 +29,9 @@ class IntegerStack:
 
     def push(self, item):
         try:
-            self.elements.append(int(float(item))) #fixed bug with pushing float number with string type like "6.234"
+            self.elements.append(int(item)) #fixed bug with pushing float number with string type like "6.234"
             return self.elements
+       
         except:
             print("not a integer")
             return self.elements
@@ -66,7 +67,9 @@ def main():
     print(my_stack)
     print('try to pop')
     my_stack.pop()
+    print(my_stack)
     my_stack.pop()
+    print(my_stack)
     my_stack.pop()
 
     print(my_stack)

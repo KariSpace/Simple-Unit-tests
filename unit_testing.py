@@ -20,8 +20,20 @@ class TestIntegerStack(unittest.TestCase):
         self.assertEqual(self.test_stack.push("56"), [56])
         self.assertEqual(self.test_stack.push("random string"), [56])
         self.assertEqual(self.test_stack.push("random string winh numbers 234548"), [56])
-        self.assertEqual(self.test_stack.push("6.234"), [56,6]) # passed
 
+
+
+    def test_pop(self):
+        self.assertEqual(self.test_stack.pop(), [])
+        self.assertEqual(self.test_stack.push(4), [4])
+        self.assertEqual(self.test_stack.push(3), [4, 3])
+        self.assertEqual(self.test_stack.push(12), [4 , 3, 12])
+        self.assertEqual(self.test_stack.pop(),  12)
+        self.assertEqual(self.test_stack.pop(),  3)
+        self.assertEqual(self.test_stack.pop(),  4)
+        self.assertEqual(self.test_stack.pop(), [])
+
+        
 
   
 # Executing the tests in the above test case class
