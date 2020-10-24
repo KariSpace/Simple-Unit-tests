@@ -19,7 +19,8 @@ class TestIntegerStack(unittest.TestCase):
     def test_push_string(self):
         self.assertEqual(self.test_stack.push("56"), [56])
         self.assertEqual(self.test_stack.push("random string"), [56])
-        self.assertEqual(self.test_stack.push("6.234"), [56,6]) # didn`t passed
+        self.assertEqual(self.test_stack.push("random string winh numbers 234548"), [56])
+        self.assertEqual(self.test_stack.push("6.234"), [56,6]) # passed
 
 
   

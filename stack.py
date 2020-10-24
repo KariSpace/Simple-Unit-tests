@@ -1,3 +1,4 @@
+#creating simple stack with default methods
 class Stack:
     def __init__(self):
         self.elements = []
@@ -5,7 +6,7 @@ class Stack:
     def push(self, item):
         self.elements.append(item)
 
-    def pop(self):
+    def pop(self): 
         if not (self.isEmpty()):
             return self.elements.pop()
         else:
@@ -21,17 +22,17 @@ class Stack:
     def __str__(self):
         return str(list(iter(self)))
 
-
+#creating a stack only for integer values with default methods
 class IntegerStack:
     def __init__(self):
         self.elements = []
 
     def push(self, item):
         try:
-            self.elements.append(int(item))
+            self.elements.append(int(float(item))) #fixed bug with pushing float number with string type like "6.234"
             return self.elements
         except:
-            print("not a string")
+            print("not a integer")
             return self.elements
 
 
@@ -52,7 +53,7 @@ class IntegerStack:
     def __str__(self):
         return str(list(iter(self)))
 
-
+# Executing the IntegerStack class methods
 def main():
 
     my_stack = IntegerStack()
