@@ -5,7 +5,7 @@ Simple unit-tests lab:  implement a stack based on a static array. Each element 
 
 ### 1. Git clone repo 
 
-### 2. Run unit_testing.py
+### 2. Run unit_testing.py  -v
 #### Output:
 
 ----------------------------------------------------------------------
