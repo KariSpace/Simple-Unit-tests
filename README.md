@@ -16,9 +16,7 @@ test_push_float (__main__.TestIntegerStack) ... ok
 
 test_push_integer (__main__.TestIntegerStack) ... ok
 
-test_push_string (__main__.TestIntegerStack) ... not a integer not a integer
-
-ok
+test_push_string (__main__.TestIntegerStack) ... not a integer not a integer ok
 
 
 Ran 4 tests in 0.000s
