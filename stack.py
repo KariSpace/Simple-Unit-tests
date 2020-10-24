@@ -28,11 +28,12 @@ class IntegerStack:
 
     def push(self, item):
         try:
-            int(item)
-            self.elements.append(item)
+            self.elements.append(int(item))
+            return self.elements
         except:
             print("not a string")
-            pass
+            return self.elements
+
 
 
     def pop(self):
@@ -57,9 +58,8 @@ def main():
     my_stack = IntegerStack()
 
     print('try to push differ values')
-    my_stack.push(45)
-    my_stack.push('79')
-    my_stack.push('c')
+    my_stack.push(0.45)
+    my_stack.push('46')
     my_stack.push('0.23')
 
     print(my_stack)
