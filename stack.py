@@ -10,7 +10,7 @@ class Stack:
         if not (self.isEmpty()):
             return self.elements.pop()
         else:
-            print("stack already empty")
+            # print("stack already empty")
             return self.elements
 
     def isEmpty(self):
@@ -22,18 +22,19 @@ class Stack:
     def __str__(self):
         return str(list(iter(self)))
 
-#creating a stack only for integer values with default methods
+
+# creating a stack only for integer values with default methods
 class IntegerStack:
     def __init__(self):
         self.elements = []
 
     def push(self, item):
         try:
-            self.elements.append(int(item)) #fixed bug with pushing float number with string type like "6.234"
+            self.elements.append(int(item)) # fixed bug with pushing float number with string type like "6.234"
             return self.elements
        
         except:
-            print("not a integer")
+            # print("not a integer")
             return self.elements
 
 
@@ -42,7 +43,7 @@ class IntegerStack:
         if not (self.isEmpty()):
             return self.elements.pop()
         else:
-            print("stack already empty")
+            # print("stack already empty")
             return self.elements
 
     def isEmpty(self):
@@ -53,6 +54,7 @@ class IntegerStack:
 
     def __str__(self):
         return str(list(iter(self)))
+
 
 # Executing the IntegerStack class methods
 def main():

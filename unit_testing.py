@@ -19,21 +19,24 @@ class TestIntegerStack(unittest.TestCase):
     def test_push_string(self):
         self.assertEqual(self.test_stack.push("56"), [56])
         self.assertEqual(self.test_stack.push("random string"), [56])
-        self.assertEqual(self.test_stack.push("random string winh numbers 234548"), [56])
-
-
+        self.assertEqual(self.test_stack.push("random 325 string with numbers 234548"), [56])
 
     def test_pop(self):
         self.assertEqual(self.test_stack.pop(), [])
-        self.assertEqual(self.test_stack.push(4), [4])
-        self.assertEqual(self.test_stack.push(3), [4, 3])
-        self.assertEqual(self.test_stack.push(12), [4 , 3, 12])
+        self.test_stack.push(4)
+        self.test_stack.push(3)
+        self.test_stack.push(12)
         self.assertEqual(self.test_stack.pop(),  12)
         self.assertEqual(self.test_stack.pop(),  3)
         self.assertEqual(self.test_stack.pop(),  4)
         self.assertEqual(self.test_stack.pop(), [])
 
-        
+    def test_isEmpty(self):
+        self.assertTrue(self.test_stack.isEmpty())
+        self.test_stack.push(4)
+        self.assertFalse(self.test_stack.isEmpty())
+        self.test_stack.pop()
+        self.assertTrue(self.test_stack.isEmpty())
 
   
 # Executing the tests in the above test case class
