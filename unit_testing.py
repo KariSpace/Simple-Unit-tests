@@ -16,9 +16,9 @@ class TestIntegerStack(unittest.TestCase):
 
         """
         self.assertEqual(self.test_stack.push(4), [4])
-        self.assertCountEqual(self.test_stack.push(0), [4, 0])
-        self.assertCountEqual(self.test_stack.push(99999999), [4, 0, 99999999])
-        self.assertCountEqual(self.test_stack.push(-4), [4, 0, 99999999, -4])
+        self.assertEqual(self.test_stack.push(0), [4, 0])
+        self.assertEqual(self.test_stack.push(99999999), [4, 0, 99999999])
+        self.assertEqual(self.test_stack.push(-4), [4, 0, 99999999, -4])
 
 
     def test_push_float(self):
@@ -28,8 +28,8 @@ class TestIntegerStack(unittest.TestCase):
         Check if push() works correctly with floats
 
         """
-        self.assertCountEqual(self.test_stack.push(0.76), [0])
-        self.assertCountEqual(self.test_stack.push(-5.7456), [0, -5])
+        self.assertEqual(self.test_stack.push(0.76), [0])
+        self.assertEqual(self.test_stack.push(-5.7456), [0, -5])
 
     def test_push_string(self):
 
