@@ -23,7 +23,7 @@ class Stack:
         return str(list(iter(self)))
 
 
-# creating a stack only for integer values with default methods
+# creating a stack based on a static array. Each element of the array is an integer
 class IntegerStack:
     def __init__(self):
         self.elements = []
