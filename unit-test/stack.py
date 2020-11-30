@@ -23,17 +23,18 @@ class Stack:
         return str(list(iter(self)))
 
 
-# creating a stack based on a static array. Each element of the array is an integer
+# creating a stack only for integer values with default methods
 class IntegerStack:
     def __init__(self):
         self.elements = []
 
     def push(self, item):
         try:
-            self.elements.append(int(item)) # fixed bug with pushing float number with string type like "6.234"
+            int_value = int(item)
+            self.elements.append(int_value) 
             return self.elements
        
-        except:
+        except ValueError:
             # print("not a integer")
             return self.elements
 
@@ -64,7 +65,7 @@ def main():
     print('try to push differ values')
     my_stack.push(0.45)
     my_stack.push('46')
-    my_stack.push('0.23')
+    my_stack.push('0.ff')
 
     print(my_stack)
     print('try to pop')
@@ -74,7 +75,7 @@ def main():
     print(my_stack)
     my_stack.pop()
 
-    print(my_stack)
+
 
 
     if my_stack.isEmpty():

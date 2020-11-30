@@ -38,6 +38,7 @@ class TestIntegerStack(unittest.TestCase):
         Check if push() works correctly with strings
 
         """
+
         self.assertEqual(self.test_stack.push("56"), [56])
         self.assertEqual(self.test_stack.push("random string"), [56])
         self.assertEqual(self.test_stack.push("random 325 string with numbers 234548"), [56])
@@ -49,6 +50,7 @@ class TestIntegerStack(unittest.TestCase):
         Check if pop() works correctly 
 
         """
+        
         self.assertEqual(self.test_stack.pop(), [])
         self.test_stack.push(4)
         self.test_stack.push(3)
