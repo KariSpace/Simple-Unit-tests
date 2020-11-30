@@ -1,11 +1,9 @@
 # Simple-Unit-tests
 Simple unit-tests lab:  implement a stack based on a static array. Each element of the array is an integer
 
-## Setup:
+# https://gitlab.com/kpivtorak55/my-simple-pipeline.git
+# https://github.com/KariSpace/Simple-Unit-tests
 
-### 1. Git clone repo 
-
-### 2. Run python unit_testing.py -v
 #### Output:
 
 ----------------------------------------------------------------------
